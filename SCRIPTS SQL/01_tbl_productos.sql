@@ -1,0 +1,10 @@
+IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'PRODUCTOS')
+BEGIN
+    CREATE TABLE PRODUCTOS (
+    codigo_interno VARCHAR(50) PRIMARY KEY,
+    descripcion VARCHAR(500) NOT NULL,
+    unidad_medida VARCHAR(20) NOT NULL,
+    marca VARCHAR(100) NOT NULL,
+    precio DECIMAL(10,2) NOT NULL
+);
+END
